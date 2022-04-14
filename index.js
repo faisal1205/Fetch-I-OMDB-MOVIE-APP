@@ -29,9 +29,10 @@ function movieFunction()
     appendMovie(err)
     })
    
-
+}
     function appendMovie(data)
     {
+        container.innerHTML = null
      
        if(data.Error === 'Movie not found!' || data.Response === undefined || data.Title == undefined)
         {
@@ -66,17 +67,17 @@ function movieFunction()
                 Div.append(title,year,Rating,image,btndiv)
             }
 
-else{
-    Div.append(title,year,Rating,image)
-}
+              else{
+                Div.append(title,year,Rating,image)
+                 }
             
             //console.log(Div)
             document.getElementById("container").append(Div)
         }
         
        
-     
+        
     }
-container.innerHTML = null
-}
+
+
 
